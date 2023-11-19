@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CO2 Emission Tracker</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">CO2 Emission Tracker</h1>
+    </header>
+
+    <div class="container">
+        <div class="item" id="input-div">
+            <h2>Input</h2>
+            <span class="dataInput">
+                <label>Start Date</label>
+                <input type="date" id="startDateInput">
+            </span>
+            <span class="dataInput">
+                <label>CO2 Prediction Stop Date</label>
+                <input type="date" id="stopDateInput">
+            </span>
+            <span class="dataInput">
+                <label>Select a location</label>
+                <div id="map"></div>
+            </span>
+
+            <span class="dataInput"><button id="goButton" onclick="call_api()">Go</button></span>
+        </div>
+        <div class="item" id="output-div">
+            <h2>Output</h2>
+            <img id="output_img" alt="Output will appear here">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script defer src="script.js"></script>
+
+
+</body>
+
